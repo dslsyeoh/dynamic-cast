@@ -12,6 +12,8 @@ import java.util.stream.Collectors;
 
 public final class CastUtils
 {
+    private CastUtils() {}
+
     public static <C, T> List<T> toComponents(List<C> objects, Class<T> clazz)
     {
         return objects.stream().filter(clazz::isInstance).map(object -> toType(object, clazz)).collect(Collectors.toList());
