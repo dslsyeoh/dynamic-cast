@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 
 public class NumericInput implements Component
 {
-    TextField textField;
+    private TextField textField;
 
     public NumericInput()
     {

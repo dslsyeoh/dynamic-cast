@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 
 public class TextInput implements Component
 {
-    TextField textField;
+    private TextField textField;
 
     public TextInput()
     {
