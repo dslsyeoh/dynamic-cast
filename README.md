@@ -1,0 +1,1 @@
+Simple dynamic cast concept
