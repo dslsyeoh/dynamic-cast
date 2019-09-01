@@ -1,6 +1,6 @@
 /*
- * Owned by Steven Yeoh
- * Copyright (c) 2019.
+ * Author Steven Yeoh
+ * Copyright (c) 2019. All rights reserved
  */
 
 package com.dsl.dynamic.cast.components;
