@@ -13,6 +13,7 @@ import com.dsl.dynamic.cast.utils.CCastUtils;
 import javafx.application.Application;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputControl;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -44,18 +45,18 @@ public class DynamicCastDemo extends Application
         NumericInput numericInput = CCastUtils.toType(components.get(1), NumericInput.class);
         System.out.println("Convert [Component] to [NumericInput]=" + numericInput);
 
-        List<NumericInput> numericInputs = CCastUtils.toComponent(components, NumericInput.class);
+        List<NumericInput> numericInputs = CCastUtils.toList(components, NumericInput.class);
         System.out.println("\nConvert [Component] list to [Numeric] list");
         numericInputs.forEach(System.out::println);
 
         TextField textField = CCastUtils.toType(components.get(0), TextField.class);
         System.out.println("\nConvert [TextInput] to [TextField]=" + textField);
 
-        List<TextField> textFields = CCastUtils.toType(numericInputs, TextField.class);
+        List<TextField> textFields = CCastUtils.toList(components, TextField.class);
         System.out.println("\nConvert [NumericInput] list to [TextField] list");
         textFields.forEach(System.out::println);
 
-        List<TextField> textFieldList = CCastUtils.toType(components, TextField.class);
+        List<TextField> textFieldList = CCastUtils.toList(components, TextField.class);
         System.out.println("\nConvert [Components] list to [TextField] list");
         textFieldList.forEach(System.out::println);
 
@@ -63,11 +64,11 @@ public class DynamicCastDemo extends Application
         System.out.println("\nConvert [ButtonInput] to [Button]=" + button);
 
 
-        List<Button> buttons = CCastUtils.toType(components, Button.class);
+        List<Button> buttons = CCastUtils.toList(components, Button.class);
         System.out.println("\nConvert [Components] list to [Button] list");
         buttons.forEach(System.out::println);
 
-        List<Button> buttonList = CCastUtils.toNode(components, Button.class);
+        List<Button> buttonList = CCastUtils.toList(components, Button.class);
         System.out.println("\nConvert [Component] list to [Button] list");
         buttonList.forEach(System.out::println);
     }
